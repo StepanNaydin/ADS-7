@@ -1,6 +1,5 @@
 // Copyright 2022 NNTU-CS
 #include <iostream>
-using namespace std;
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
@@ -118,13 +117,11 @@ struct TPQueue {
             }
         }
     }
-    
     const T& pop() {
-        char c1 = arr[count - 1]->val;
-        int c2 = arr[count - 1]->prior;
+        T c{ arr[count - 1]->val, arr[count - 1]->prior };
         arr.remove_last();
         count--;
-        return SYM{ c1, c2 };
+        return c;
     }
 };
 
