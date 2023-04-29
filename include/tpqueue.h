@@ -105,7 +105,7 @@ struct TPQueue {
                     arr.push_back(sum.ch, sum.prior);
                     count++;
                     break;
-                } else if (arr[q]->prior > sum.prior) {
+                } else if (arr[q]->prior >= sum.prior) {
                     arr.push_back(arr[count - 1]->val, arr[count - 1]->prior);
                     for (int w = count - 1; w > q; w--) {
                         arr.prisvoit(w, arr[w - 1]->val, arr[w - 1]->prior);
