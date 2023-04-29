@@ -117,7 +117,7 @@ struct TPQueue {
             }
         }
     }
-    const T& pop() {
+    const T pop() {
         T c{ arr[count - 1]->val, arr[count - 1]->prior };
         arr.remove_last();
         count--;
